@@ -1,10 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import frontendImage from '../assets/frontend.png';
 
 function HomePage() {
     return (
         <div style={containerStyle}>
             <h1 style={headingStyle}>Welcome to the Learning Portal</h1>
+
+            <img src={frontendImage} alt="Frontend" style={imageStyle} /> {/* Adjusted image style */}
+
 
             <div style={sectionStyle}>
                 <h2>Frontend Technologies</h2>
@@ -66,6 +70,13 @@ const buttonStyle = {
     ':hover': {
         background: 'linear-gradient(to right, #2E8B57, #4CAF50)',
     },
+};
+
+const imageStyle = {
+    width: '100%',
+    // marginBottom: '20px', // Adjust as needed
+    // marginLeft: '-20px', // Move image to the left
+    // marginTop: '20px', // Add top margin
 };
 
 export default HomePage;

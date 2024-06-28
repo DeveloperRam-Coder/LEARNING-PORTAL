@@ -5,78 +5,94 @@ import frontendImage from '../assets/frontend.png';
 function HomePage() {
     return (
         <div style={containerStyle}>
-            <h1 style={headingStyle}>Welcome to the Learning Portal</h1>
-
-            <img src={frontendImage} alt="Frontend" style={imageStyle} /> {/* Adjusted image style */}
-
-
-            <div style={sectionStyle}>
-                <h2>Frontend Technologies</h2>
-                <p>Explore various frontend technologies used to build interactive user interfaces.</p>
-                <Link to="/frontend">
-                    <button style={buttonStyle}>Explore Frontend</button>
-                </Link>
+            <div style={columnStyle}>
+                <h1 style={headingStyle}>Welcome to the Learning Portal</h1>
+                <img src={frontendImage} alt="Frontend" style={imageStyle} />
             </div>
 
-            <div style={sectionStyle}>
-                <h2>Backend Technologies</h2>
-                <p>Discover backend technologies that power the server-side of web applications.</p>
-                <Link to="/backend">
-                    <button style={buttonStyle}>Explore Backend</button>
-                </Link>
-            </div>
+            <div style={columnStyle}>
+                <div style={sectionStyle}>
+                    <h2 style={headingStyle}>Frontend Technologies</h2>
+                    <p style={paraStyle}>Explore various frontend technologies used to build interactive user interfaces.</p>
+                    <Link to="/frontend">
+                        <button style={buttonStyle}>Explore Frontend</button>
+                    </Link>
+                </div>
 
-            <div style={sectionStyle}>
-                <h2>Database Technologies</h2>
-                <p>Learn about database technologies used to store and manage data in applications.</p>
-                <Link to="/database">
-                    <button style={buttonStyle}>Explore Databases</button>
-                </Link>
+                <div style={sectionStyle}>
+                    <h2 style={headingStyle}>Backend Technologies</h2>
+                    <p style={paraStyle}>Discover backend technologies that power the server-side of web applications.</p>
+                    <Link to="/backend">
+                        <button style={buttonStyle}>Explore Backend</button>
+                    </Link>
+                </div>
+
+                <div style={sectionStyle}>
+                    <h2 style={headingStyle}>Database Technologies</h2>
+                    <p style={paraStyle}>Learn about database technologies used to store and manage data in applications.</p>
+                    <Link to="/database">
+                        <button style={buttonStyle}>Explore Databases</button>
+                    </Link>
+                </div>
+
+                <div style={sectionStyle}>
+                    <h2 style={headingStyle}>MERN Fullstack Technologies</h2>
+                    <p style={paraStyle}>Learn about MERN Fullstack technologies used to store and manage data in applications.</p>
+                    <Link to="/mernFullstack">
+                        <button style={buttonStyle}>Explore MERN Fullstack</button>
+                    </Link>
+                </div>
             </div>
         </div>
     );
 }
 
 const containerStyle = {
-    maxWidth: '800px',
-    margin: '0 auto',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    maxWidth: '2000px',
+    margin: '10px auto',
+    padding: '90px',
+    backgroundColor: '#f4f4f4',
+    borderRadius: '10px',
+    border: '2px solid black'
+};
+
+const columnStyle = {
+    flex: '1',
     padding: '20px',
 };
 
 const headingStyle = {
-    textAlign: 'center',
-    fontSize: '2.5rem',
-    marginBottom: '30px',
+    fontSize: '1.5rem',
+    color: 'blue',
+    marginBottom: '20px',
+    marginTop: '20px',
 };
 
-const sectionStyle = {
-    textAlign: 'center',
-    marginBottom: '40px',
-};
-
-const buttonStyle = {
-    color: 'white',
-    background: 'linear-gradient(to right, #4CAF50, #2E8B57)',
-    border: 'none',
-    padding: '12px 24px',
-    margin: '10px',
-    cursor: 'pointer',
-    borderRadius: '5px',
-    outline: 'none',
-    transition: 'background 0.3s ease',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-    width: '200px',
-    fontSize: '1rem',
-    ':hover': {
-        background: 'linear-gradient(to right, #2E8B57, #4CAF50)',
-    },
+const paraStyle = {
+    color: 'black',
 };
 
 const imageStyle = {
-    width: '100%',
-    // marginBottom: '20px', // Adjust as needed
-    // marginLeft: '-20px', // Move image to the left
-    // marginTop: '20px', // Add top margin
+    width: '90%',
+    marginBottom: '20px',
+    borderRadius: '10px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+};
+
+const buttonStyle = {
+    color: '#fff',
+    background: 'linear-gradient(to right, #ff7e5f, #feb47b)',
+    border: 'none',
+    padding: '12px 24px',
+    cursor: 'pointer',
+    borderRadius: '5px',
+};
+
+const sectionStyle = {
+    marginBottom: '20px',
 };
 
 export default HomePage;

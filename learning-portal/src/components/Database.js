@@ -2,39 +2,30 @@ import React from 'react';
 
 function Database() {
 
-    const h1Style = {
-        border: '2px solid white', // White border
-        width: '100%', // Full width within grid item
-        textAlign: 'center',
-
-    };
-    const containerStyle = {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', // Responsive grid with minimum 200px width
-        gap: '20px', // Gap between grid items
-        textAlign: 'center',
-        margin: '20px'
+    const titleStyle = {
+        fontSize: '1.5rem',
+        marginBottom: '2rem',
     };
 
     const buttonStyle = {
-        boxShadow: '0 0 20px rgba(255, 255, 255, 0.7)', // Grow shadow on hover
-
+        boxShadow: '0 0 20px rgba(255, 255, 255, 0.7)',
         color: 'white',
         background: 'linear-gradient(to right, #00c6ff, #0072ff)',
-        border: '2px solid white', // White border
+        border: '2px solid white',
         padding: '10px 20px',
         cursor: 'pointer',
         borderRadius: '5px',
         outline: 'none',
-        transition: 'background 0.3s ease, border 0.3s ease', // Added border transition
-        width: '90%', // Full width within grid item
-        filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))', // Drop shadow effect
+        transition: 'background 0.3s ease, border 0.3s ease',
+        filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
+        width: '10%',
     };
 
 
     return (
-        <div style={containerStyle}>
-            {/* <h1 style={h1Style}>Database Technologies</h1> */}
+        <div>
+            <div style={titleStyle}>Database Technologies</div>
+
             <button style={{ ...buttonStyle, backgroundColor: '#FF6347' }}>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg" />
                 MongoDB</button>

@@ -2,9 +2,8 @@ import React from 'react';
 
 function Frontend() {
     return (
-        <div style={containerStyle}>
-            {/* <h1 style={h1Style}>Frontend Technologies</h1> */}
-
+        <div >
+            <div style={titleStyle}>Frontend Technologies</div>
             <button style={{ ...buttonStyle, backgroundColor: 'blue' }}>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
                 HTML</button>
@@ -50,15 +49,12 @@ function Frontend() {
         </div>
     );
 }
-
-const containerStyle = {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-    gap: '20px',
-    textAlign: 'center',
-    margin: '20px'
+const titleStyle = {
+    gridColumn: '1 / -1', // Title spans all columns
+    fontSize: '1.5rem',
+    marginBottom: '2rem',
+    // border: '2px solid white',
 };
-
 const buttonStyle = {
     boxShadow: '0 0 20px rgba(255, 255, 255, 0.7)', // Grow shadow on hover
 
@@ -70,20 +66,9 @@ const buttonStyle = {
     borderRadius: '5px',
     outline: 'none',
     transition: 'background 0.3s ease, border 0.3s ease, transform 0.2s ease', // Added transform for animation
-    width: '90%', // Full width within grid item
+    width: '10%', // Full width within grid item
     filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
 };
 
-const h1Style = {
-    width: '100%',
-    textAlign: 'center',
-    border: '2px solid white',
-
-};
-
-const hoverStyle = {
-    filter: 'brightness(85%)',
-    transform: 'scale(1.05)', // Scale up on hover
-};
 
 export default Frontend;

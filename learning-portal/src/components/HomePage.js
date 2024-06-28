@@ -56,7 +56,7 @@ const containerStyle = {
     padding: '90px',
     backgroundColor: '#f4f4f4',
     borderRadius: '10px',
-    border: '2px solid black'
+    // border: '2px solid black'
 };
 
 const columnStyle = {

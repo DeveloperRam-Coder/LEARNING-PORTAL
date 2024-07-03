@@ -32,6 +32,8 @@ const MernFullstack = () => {
   return (
     <div style={containerStyle}>
       <div style={titleStyle}>MERN Fullstack Roadmap</div>
+      <p style={descriptionStyle}>Explore interview questions for various frontend technologies.</p>
+
       <div style={contentContainerStyle}>
                 <div style={buttonContainerStyle}>
           {technologies.map((tech, index) => (
@@ -67,8 +69,7 @@ const containerStyle = {
 
 const titleStyle = {
   fontSize: '2rem',
-  marginBottom: '20px',
-  textAlign: 'center'
+  marginBottom: '10px',
 };
 
 const contentContainerStyle = {

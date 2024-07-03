@@ -1,3 +1,5 @@
+// App.jsx
+
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import HomePage from './components/HomePage';
@@ -6,6 +8,7 @@ import Backend from './components/Backend';
 import Database from './components/Database';
 import MernFullstack from './components/MernFullstack.js';
 import LoadingScreen from './components/LoadingScreen';
+import InterviewPreparationPage from './components/InterviewPreparationPage'; // Import your InterviewPreparationPage component
 import logo from './study.png'; // Import your logo image file
 
 function App() {
@@ -38,6 +41,7 @@ function App() {
                         <Link to="/backend" style={{ margin: '10px', color: 'black', textDecoration: 'none' }}>Back-End</Link>
                         <Link to="/database" style={{ margin: '10px', color: 'black', textDecoration: 'none' }}>Database</Link>
                         <Link to="/mernFullstack" style={{ margin: '10px', color: 'black', textDecoration: 'none' }}>Mern-Fullstack</Link>
+                        <Link to="/interview" style={{ margin: '10px', color: 'black', textDecoration: 'none' }}>Interview Prep</Link>
                     </div>
                 </nav>
                 <Routes>
@@ -46,6 +50,7 @@ function App() {
                     <Route path="/backend" element={<Backend />} />
                     <Route path="/database" element={<Database />} />
                     <Route path="/mernFullstack" element={<MernFullstack />} />
+                    <Route path="/interview" element={<InterviewPreparationPage />} /> {/* New route for Interview Preparation */}
                 </Routes>
             </div>
         </Router>
